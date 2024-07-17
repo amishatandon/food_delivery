@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/utils/dimensions.dart';
 import 'package:ecommerce_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,7 @@ class IconAndTextWidget extends StatelessWidget {
       Icon(
         icon,
         color: iconColor,
+        size: Dimensions.iconSize24,
       ),
       const SizedBox(
         width: 5,
