@@ -3,6 +3,7 @@ import 'package:ecommerce_app/utils/dimensions.dart';
 import 'package:ecommerce_app/widgets/app_column.dart';
 import 'package:ecommerce_app/widgets/app_icon.dart';
 import 'package:ecommerce_app/widgets/big_text.dart';
+import 'package:ecommerce_app/widgets/expandable_text.dart';
 import 'package:flutter/material.dart';
 
 class PopularFoodDetail extends StatelessWidget {
@@ -67,7 +68,17 @@ class PopularFoodDetail extends StatelessWidget {
                   SizedBox(
                     height: Dimensions.height20,
                   ),
-                  BigText(text: "Introduce")
+                  BigText(text: "Introduce"),
+                  SizedBox(
+                    height: Dimensions.height20,
+                  ),
+                  const Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpandableText(
+                          text:
+                              "Chinese side dishes, often referred to as xiǎo cài, play a significant role in Chinese cuisine, enhancing the main course with their variety and flavors. These small, complementary dishes can range from pickled vegetables, such as Sichuan pickles, to marinated tofu, like century eggs with tofu. Common side dishes also include stir-fried greens, such as garlic sautéed bok choy or Chinese broccoli, providing a fresh, crunchy contrast to richer main dishes. Cold appetizers, like jellyfish salad or cucumber with garlic sauce, offer refreshing and light options. These side dishes are not only delicious but also bring a balance of textures and flavors, making the overall dining experience more harmonious and satisfying."),
+                    ),
+                  )
                 ],
               ),
             ),
