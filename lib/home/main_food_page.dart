@@ -15,6 +15,14 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
+    var screenHeight = MediaQuery.of(context).size.height;
+
+    // Print the screen width
+    print("Screen width: $screenHeight");
+    var screenWidth = MediaQuery.of(context).size.width;
+
+    // Print the screen width
+    print("Screen width: $screenWidth");
     return Scaffold(
       body: Column(
         children: [
@@ -64,9 +72,9 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
           ),
-          Expanded(
+          const Expanded(
               child: SingleChildScrollView(
-            child: const FoodPageBody(),
+            child: FoodPageBody(),
           )),
         ],
       ),
